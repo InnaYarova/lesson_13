@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*Обнулення (reset)*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+html,
+body{
+	height: 100%;
+}
+
+
+/*Стилізація*/
+[class*="container"]{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wrapper{
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.header{
+	margin-bottom: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+.header__title{
+	font-size: 30px;
+	color: rgb(107, 60, 2);
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
+	animation: title 2s linear forwards;
+	opacity: 0;
+}
+@keyframes title{
+	0%{
+	
+	}
+	100%{
+	opacity: 1;	
+	}
+}
+.header__subtitle{
+	color: rgb(181, 113, 5);
+	font-style: italic;
+}
+.header__subtitle p:nth-child(1){
+	animation: title 2s linear 0.5s forwards;
+	opacity: 0;
+}
+
+.header__subtitle p:nth-child(2){
+	padding-right: 20px;
+	text-align: right;
+	color: rgb(119, 75, 5);
+	margin-bottom: 15px;
+	animation: title 2s linear 0.8s forwards;
+	opacity: 0;
+}
+.header__subtitle p:last-child{
+	animation: title 2s linear 1.2s forwards;
+	color: rgb(6, 160, 29);
+	opacity: 0;
+}
+
+.autumn{
+width: 530px;
+height: 310px;
+position: relative;
+}
+.autumn__tree img{
+width: 264px;
+height: 300px;
+display: inline-block;
+transform: translateX(50%);
+}
+.autumn__leaf{
+	position: relative;
+	z-index: 1;
+	animation-name: leaf;
+animation-duration: 3s;
+animation-delay: 16s;
+animation-fill-mode: forwards;
+width: 530px;
+}
+@keyframes leaf{
+	0%{
+	opacity: 1;
+	}
+	100%{
+	opacity: 0;	
+	}
+}
+
+.autumn__leaf img:nth-child(1){
+transform: translate(120px, -200px);
+animation-name: child1;
+animation-duration: 5s;
+animation-delay: 4s;
+animation-fill-mode: forwards;
+}
+@keyframes child1{
+	0%{
+		transform: translate(120px, -200px);
+	}
+	100%{
+		transform: translate(120px, -60px) rotate(320deg);
+	}
+}
+.autumn__leaf img:hover{
+animation-play-state: paused;
+}
+.autumn__leaf img:nth-child(2){
+	transform: translate(125px, -200px);
+	animation-name: child1;
+	animation-duration: 5s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+}
+
+.autumn__leaf img:nth-child(3){
+	transform: translate(50px, -250px);
+	animation-name: child3;
+	animation-duration: 5s;
+	animation-delay: 9.8s;
+	animation-fill-mode: forwards;
+}
+@keyframes child3{
+	0%{
+		transform: translate(50px, -250px);
+	}
+	100%{
+		transform: translate(120px, -60px) rotate(320deg);
+	}
+}
+
+.autumn__leaf img:nth-child(4){
+	transform: translate(10px, -289px) rotate(180deg);
+	animation-name: child4;
+	animation-duration: 5s;
+	animation-delay: 9s;
+	animation-fill-mode: forwards;
+}
+@keyframes child4{
+	0%{
+		transform: translate(10px, -289px) rotate(180deg);
+	}
+	100%{
+		transform: translate(120px, -60px) rotate(320deg);
+	}
+}
+.autumn__leaf img:nth-child(5){
+	transform: translate(-3px, -250px);
+	animation-name: child5;
+	animation-duration: 5s;
+	animation-delay: 7s;
+	animation-fill-mode: forwards;
+}
+@keyframes child5{
+	0%{
+		transform: translate(-3px, -250px);
+	}
+	100%{
+		transform: translate(0px, -60px) rotate(320deg);
+	}
+}
+.autumn__leaf img:nth-child(6){
+	transform: translate(-65px, -190px);
+	animation-name: child6;
+	animation-duration: 5s;
+	animation-delay: 7.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes child6{
+	0%{
+		transform: translate(-65px, -190px);
+	}
+	100%{
+		transform: translate(80px, -60px) rotate(320deg);
+	}
+}
+.autumn__leaf img:nth-child(7){
+	transform: translate(-80px, -145px);
+	animation-name: child7;
+	animation-duration: 5s;
+	animation-delay: 8s;
+	animation-fill-mode: forwards;
+	}
+	@keyframes child7{
+		0%{
+			transform: translate(-80px, -145px);
+		}
+		100%{
+			transform: translate(-150px, -60px) rotate(260deg);
+		}
+	}
+.autumn__leaf img:nth-child(8){
+	transform: translate(-153px, -205px) rotate(185deg);
+	animation-name: child8;
+	animation-duration: 5s;
+	animation-delay: 8.3s;
+	animation-fill-mode: forwards;
+}
+@keyframes child8{
+	0%{
+		transform: translate(-153px, -205px) rotate(185deg);
+	}
+	100%{
+		transform: translate(-150px, -60px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(9){
+	transform: translate(138px, -345px) rotate(90deg);
+	animation-name: child9;
+	animation-duration: 5s;
+	animation-delay: 10.3s;
+	animation-fill-mode: forwards;
+}
+@keyframes child9{
+	0%{
+		transform: translate(138px, -345px) rotate(90deg);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(10){
+	transform: translate(90px, -207px);
+	animation-name: child10;
+	animation-duration: 5s;
+	animation-delay: 8.6s;
+	animation-fill-mode: forwards;
+}
+@keyframes child10{
+	0%{
+		transform: translate(90px, -207px);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(11){
+	transform: translate(190px, -297px);
+	animation-name: child11;
+	animation-duration: 5s;
+	animation-delay: 6.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes child11{
+	0%{
+		transform: translate(190px, -297px);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(12){
+	transform: translate(100px, -370px) rotate(180deg);
+	animation-name: child12;
+	animation-duration: 5s;
+	animation-delay: 10.8s;
+	animation-fill-mode: forwards;
+}
+@keyframes child12{
+	0%{
+		transform: translate(100px, -370px) rotate(180deg);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(13){
+	transform: translate(78px, -267px);
+	animation-name: child13;
+	animation-duration: 5s;
+	animation-delay: 5.7s;
+	animation-fill-mode: forwards;
+}
+@keyframes child13{
+	0%{
+		transform: translate(78px, -267px);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+.autumn__leaf img:nth-child(14){
+	transform: translate(-90px, -362px);
+	animation-name: child14;
+	animation-duration: 5s;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes child14{
+	0%{
+		transform: translate(-90px, -362px);
+	}
+	100%{
+		transform: translate(10px, -105px) rotate(260deg);
+	}
+}
+
+.autumn__fallen-leaves{
+	transform: translate(50px, -207px);
+	animation-name: leaf;
+	animation-duration: 3s;
+animation-delay: 16s;
+animation-fill-mode: forwards;
+}
+
+
+.transition{
+}
+.transition__text{
+	color: blue;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	padding-top: 50px;
+	position: relative;
+	z-index: 50;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.transition__text:hover{
+	border: 8px dashed blue;
+background-color: yellow;
+transition: border 3s linear 1s, background 2s linear 4s;
+}
+.animation__img{
+	background: url('../img/field.jpg');
+	width: 400px;
+}
+.animation__img img{
+	width: 100px;
+	animation-name: rotate-translate;
+	animation-duration: 5s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes rotate-translate{
+	0%{
+		
+	}
+	100%{
+		transform: translate(300px, 0px) rotate(360deg);
+	}
+	0%{
+	
+	}
+}
+.animation__img:hover img{
+	animation-play-state: paused;
+}
